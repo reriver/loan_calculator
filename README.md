@@ -32,9 +32,11 @@ Incorrect parameters
 You may have noticed that for differentiated payments you will need 4 out of 5 parameters (excluding payment), and the same is true for annuity payments (the user will be calculating the number of payments, the payment amount, or the loan principal). Thus, you should also display an error message when fewer than four parameters are provided:
 
 > python creditcalc.py --type=annuity --principal=1000000 --payment=104000
+
 Incorrect parameters
 You should also display an error message when negative values are entered:
 
 > python creditcalc.py --type=diff --principal=30000 --periods=-14 --interest=10
+
 Incorrect parameters
 The only thing left is to compute the overpayment: the amount of interest paid over the whole term of the loan. Voila: you have a real loan calculator!
